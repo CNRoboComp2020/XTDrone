@@ -10,7 +10,7 @@ import cv2
 
 actor_num = 6
 uav_num = 6
-err_threshold = 1
+err_threshold = 3
 coordx_bias = 3
 coordy_bias = 9
 actor_id_dict = {'green':[0], 'blue':[1], 'brown':[2], 'white':[3], 'red':[4,5]}

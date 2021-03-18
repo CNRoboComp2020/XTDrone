@@ -63,3 +63,7 @@ do
     python gimbal_control.py tailsitter $vehicle_num&
     let "vehicle_num++"
 done
+while(true)
+do 
+sleep 1
+done
