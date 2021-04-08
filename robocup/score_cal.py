@@ -106,9 +106,12 @@ if __name__ == "__main__":
 
     while not rospy.is_shutdown():
         for i in left_actors:
-            actors_pos_tmp = get_model_state('actor_' + str(i), 'ground_plane').pose.position
-            if not actors_pos_tmp.x**2+actors_pos_tmp.y**2 == 0:
-                actors_pos[i] = actors_pos_tmp
+            try:
+            	actors_pos_tmp = get_model_state('actor_' + str(i), 'ground_plane').pose.position
+            	if not actors_pos_tmp.x**2+actors_pos_tmp.y**2 == 0:
+                	actors_pos[i] = actors_pos_tmp
+            except BaseException as e:
+                pass 
         time_usage = rospy.get_time() - start_time
         if time_usage > 600:
             print('score:',score)
