@@ -7,8 +7,8 @@ from std_msgs.msg import String
 
 MAX_LINEAR = 20
 MAX_ANG_VEL = 3
-LINEAR_STEP_SIZE = 0.01
-ANG_VEL_STEP_SIZE = 0.01
+LINEAR_STEP_SIZE = 0.05
+ANG_VEL_STEP_SIZE = 0.02
 
 cmd_vel_mask = False
 ctrl_leader = False

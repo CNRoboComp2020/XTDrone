@@ -116,7 +116,7 @@ if __name__ == "__main__":
         if time_usage > 600:
             print('score:',score)
             print("Time out, mission failed")
-            while True:
+            while not rospy.is_shutdown():
                 pass
         score_pub.publish(score)
         time_usage_pub.publish(int(time_usage))
